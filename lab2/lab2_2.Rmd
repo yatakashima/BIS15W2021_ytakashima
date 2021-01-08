@@ -1,11 +1,13 @@
 ---
 title: "Data Structures: Vectors and Data Matrices"
 date: "`r Sys.Date()`"
+author: "Yoko Takashima" 
 output:
-  html_document:
+  html_document: 
     theme: spacelab
     toc: yes
     toc_float: yes
+    keep_md: yes
   pdf_document:
     toc: yes
 ---
@@ -29,12 +31,14 @@ Vectors are a common way of organizing data in R.  We create vectors using the `
 
 A numeric vector.
 ```{r}
-my_vector <- c(10, 20, 30)
+my_vector <- c(10, 20,30)
+is.numeric(my_vector)
 ```
 
 A character vector. Characters always have quotes and may be referred to as "strings".
 ```{r}
 days_of_the_week <- c("Monday", "Tuesday", "Wednesday", "Thrusday", "Friday", "Saturday", "Sunday")
+days_of_the_week
 ```
 
 A convenient trick for creating a vector is to generate a sequence of numbers.
@@ -54,17 +58,18 @@ Work through these examples and make adjustments to the values to experiment.
 
 2. Evaluate all numerics in `my_vector_sequence` to determine which has a value of 15.  
 ```{r}
-
+my_vector_sequence[my_vector_sequence = 15]
+my_vector_sequence==15
 ```
 
 3. We can use operators such as <, >, ==, <==, etc. Show all values in `my_vector_sequence` that are less than 10.  How about less than or equal to 10?  
 ```{r}
-
+my_vector_sequence<=10 
 ```
 
 4. If you use `[]` then you only get the values, not the logical evaluation of the entire vector. Experiment with this by adjusting the chunk below.    
 ```{r}
-my_vector_sequence[my_vector_sequence <= 10]
+yet_another_new_vector <- my_vector_sequence[my_vector_sequence <=15]
 ```
 
 ## Data Matrices
@@ -136,12 +141,14 @@ all_harry_potter_matrix
 ## Practice
 1. What are the total earnings for the US and non-US regions?  
 ```{r}
-
+total_Earnings <- colSums(harry_potter_matrix)
+total_Earnings
 ```
 
 2. Add this information to the data matrix. Hint: you are adding a row, not a column.  
 ```{r}
-
+all_harry_potter_matrix <- rbind(harry_potter_matrix,total_Earnings)
+all_harry_potter_matrix
 ```
 
 ## A few Extras
