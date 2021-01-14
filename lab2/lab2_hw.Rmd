@@ -82,6 +82,7 @@ mean(jill_values)
 temps<- hotsprings_mean_temperatures[,4]
 temps
 median(temps)
+sd(avg_temperatures)
 ```
 
 ## Push your final code to GitHub!
