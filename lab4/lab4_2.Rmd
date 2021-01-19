@@ -144,7 +144,9 @@ filter(new_mammals, family=="Bovidae"| mass>450000)
 
 6. From the `mammals` data, build a data frame that compares `mass`, `gestation`, and `newborn` among the primate genera `Lophocebus`, `Erythrocebus`, and `Macaca`. Among these genera, which species has the smallest `newborn` mass?
 ```{r}
-new_mammals_2<-filter(mammals, genus %in% c("Lophocebus", "Erythrocebus", "Macaca"))
+new_mammals_2<-filter(mammals, genus %in% c("Lophocebus", "Erythrocebus", "Macaca")
+```
+
 ```{r}
 select(new_mammals_2, "genus", "species", "mass", "gestation", "newborn")
 ```
