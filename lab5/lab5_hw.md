@@ -1,7 +1,7 @@
 ---
 title: "Lab 5 Homework"
 author: "Yoko Takashima"
-date: "2021-01-20"
+date: "2021-01-26"
 output:
   html_document: 
     theme: spacelab
@@ -346,6 +346,10 @@ good_guys%>%
 ## 2 Thor      Asgardian
 ## 3 Thor Girl Asgardian
 ```
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+</style>
+<div class = "blue">
 
 8. Among the bad guys, who are the male humans over 200 inches in height?
 
@@ -366,6 +370,7 @@ superhero_info %>%
 ## 5 Lizard      bad       Human    203
 ## 6 Scorpion    bad       Human    211
 ```
+</div>
 
 9. OK, so are there more good guys or bad guys that are bald (personal interest)?
 
